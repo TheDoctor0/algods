@@ -19,7 +19,9 @@ func BubbleSort(array []int) {
 
 		for j := 0; j+1 < i; j++ {
 			if array[j] > array[j+1] {
-				swapped = utils.Swap(array, j+1, j)
+				utils.Swap(array, j+1, j)
+
+				swapped = true
 			}
 		}
 
