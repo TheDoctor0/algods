@@ -1,7 +1,7 @@
 package sorting
 
 import (
-	"github.com/TheDoctor0/algods/utils"
+    "github.com/TheDoctor0/algods/utils"
 )
 
 /*
@@ -10,23 +10,23 @@ import (
  * Runtime: O(n^2)
  */
 func BubbleSort(array []int) {
-	if len(array) < 2 {
-		return
-	}
+    if len(array) < 2 {
+        return
+    }
 
-	for i := len(array); i > 0; i-- {
-		swapped := false
+    for i := len(array); i > 0; i-- {
+        swapped := false
 
-		for j := 0; j+1 < i; j++ {
-			if array[j] > array[j+1] {
-				utils.Swap(array, j+1, j)
+        for j := 0; j+1 < i; j++ {
+            if array[j] > array[j+1] {
+                utils.Swap(array, j+1, j)
 
-				swapped = true
-			}
-		}
+                swapped = true
+            }
+        }
 
-		if !swapped {
-			break
-		}
-	}
+        if !swapped {
+            break
+        }
+    }
 }

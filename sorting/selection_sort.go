@@ -1,7 +1,7 @@
 package sorting
 
 import (
-	"github.com/TheDoctor0/algods/utils"
+    "github.com/TheDoctor0/algods/utils"
 )
 
 /*
@@ -10,21 +10,21 @@ import (
  * Runtime: O(n^2)
  */
 func SelectionSort(array []int) {
-	if len(array) < 2 {
-		return
-	}
+    if len(array) < 2 {
+        return
+    }
 
-	for i := 0; i < len(array); i++ {
-		selection := i
+    for i := 0; i < len(array); i++ {
+        selection := i
 
-		for j := i + 1; j < len(array); j++ {
-			if array[selection] > array[j] {
-				selection = j
-			}
-		}
+        for j := i + 1; j < len(array); j++ {
+            if array[selection] > array[j] {
+                selection = j
+            }
+        }
 
-		if selection != i {
-			utils.Swap(array, selection, i)
-		}
-	}
+        if selection != i {
+            utils.Swap(array, selection, i)
+        }
+    }
 }
