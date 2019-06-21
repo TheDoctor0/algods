@@ -8,6 +8,8 @@ Implementation of various algorithms and data structures in Golang.
   - Bubble sort
   - Insertion sort
   - Selection sort
+  - Merge sort
+  - Quick sort
 
 ## Data Structures
 
