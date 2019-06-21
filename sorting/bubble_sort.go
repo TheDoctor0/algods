@@ -8,9 +8,10 @@ import (
 // Runtime: O(n^2)
 //
 // @param []int
-func BubbleSort(array []int) {
+// @return bool
+func BubbleSort(array []int) bool {
 	if len(array) <= 1 {
-		return
+		return false
 	}
 
 	swapped := true
@@ -28,4 +29,6 @@ func BubbleSort(array []int) {
 			break
 		}
 	}
+
+	return true
 }
