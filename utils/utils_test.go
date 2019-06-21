@@ -1,9 +1,10 @@
 package utils_test
 
 import (
+	"testing"
+
 	"github.com/TheDoctor0/algods/utils"
 	"github.com/stretchr/testify/assert"
-	"testing"
 )
 
 func TestSwap(t *testing.T) {
