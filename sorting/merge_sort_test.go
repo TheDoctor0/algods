@@ -7,14 +7,19 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-func TestMergeSort(t *testing.T) {
+func TestMergeSortForSingleValue(t *testing.T) {
 	single := []int{0}
-	data := []int{6, 5, 3, 1, 8, 7, 2, 4}
-	sorted := []int{1, 2, 3, 4, 5, 6, 7, 8}
 
-	sorting.MergeSort(data)
 	sorting.MergeSort(single)
 
-	assert.Equal(t, sorted, data, "Array should be sorted.")
 	assert.Equal(t, []int{0}, single, "Array sorting should be skipped for less than 2 elements.")
+}
+
+func TestMergeSort(t *testing.T) {
+	data := []int{6, 9, 5, 3, 1, 8, 7, 2, 4}
+	sorted := []int{1, 2, 3, 4, 5, 6, 7, 8, 9}
+
+	sorting.MergeSort(data)
+
+	assert.Equal(t, sorted, data, "Array should be sorted.")
 }
