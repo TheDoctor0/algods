@@ -1,8 +1,6 @@
 package sorting
 
-import (
-	"github.com/TheDoctor0/algods/utils"
-)
+import "github.com/TheDoctor0/algods/utils"
 
 func BubbleSort(array []int) {
 	swapped := true
@@ -12,9 +10,7 @@ func BubbleSort(array []int) {
 
 		for j := 0; j+1 < i; j++ {
 			if array[j] > array[j+1] {
-				utils.Swap(array, j+1, j)
-
-				swapped = true
+				swapped = utils.Swap(array, j+1, j)
 			}
 		}
 
