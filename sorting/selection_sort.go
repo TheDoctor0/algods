@@ -4,14 +4,13 @@ import (
 	"github.com/TheDoctor0/algods/utils"
 )
 
-// Selection sort - Look for smaller numbers on the right side.
+// SelectionSort - looks for smaller numbers on the right side.
 // Runtime: O(n^2)
 //
 // @param []int
-// @return bool
-func SelectionSort(array []int) bool {
-	if len(array) <= 1 {
-		return false
+func SelectionSort(array []int) {
+	if len(array) < 2 {
+		return
 	}
 
 	for i := 0; i < len(array); i++ {
@@ -27,6 +26,4 @@ func SelectionSort(array []int) bool {
 			utils.Swap(array, selection, i)
 		}
 	}
-
-	return true
 }

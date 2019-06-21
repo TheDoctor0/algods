@@ -4,14 +4,13 @@ import (
 	"github.com/TheDoctor0/algods/utils"
 )
 
-// Insertion sort - Look for bigger numbers on the left side.
+// InsertionSort - looks for bigger numbers on the left side.
 // Runtime: O(n^2)
 //
 // @param []int
-// @return bool
-func InsertionSort(array []int) bool {
-	if len(array) <= 1 {
-		return false
+func InsertionSort(array []int) {
+	if len(array) < 2 {
+		return
 	}
 
 	for i := 1; i < len(array); i++ {
@@ -21,6 +20,4 @@ func InsertionSort(array []int) bool {
 			}
 		}
 	}
-
-	return true
 }

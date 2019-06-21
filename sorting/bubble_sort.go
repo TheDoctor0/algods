@@ -4,20 +4,17 @@ import (
 	"github.com/TheDoctor0/algods/utils"
 )
 
-// Bubble sort - Bubbles up bigger values to the right side.
+// BubbleSort - bubbles up bigger values to the right side.
 // Runtime: O(n^2)
 //
 // @param []int
-// @return bool
-func BubbleSort(array []int) bool {
-	if len(array) <= 1 {
-		return false
+func BubbleSort(array []int) {
+	if len(array) < 2 {
+		return
 	}
 
-	swapped := true
-
 	for i := len(array); i > 0; i-- {
-		swapped = false
+		swapped := false
 
 		for j := 0; j+1 < i; j++ {
 			if array[j] > array[j+1] {
@@ -29,6 +26,4 @@ func BubbleSort(array []int) bool {
 			break
 		}
 	}
-
-	return true
 }
