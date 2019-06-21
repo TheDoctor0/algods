@@ -4,10 +4,11 @@ import (
 	"github.com/TheDoctor0/algods/utils"
 )
 
-// InsertionSort - looks for bigger numbers on the left side.
-// Runtime: O(n^2)
-//
-// @param []int
+/*
+ * InsertionSort - looks for bigger numbers on the left side.
+ *
+ * Runtime: O(n^2)
+ */
 func InsertionSort(array []int) {
 	if len(array) < 2 {
 		return

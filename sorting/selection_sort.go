@@ -4,10 +4,11 @@ import (
 	"github.com/TheDoctor0/algods/utils"
 )
 
-// SelectionSort - looks for smaller numbers on the right side.
-// Runtime: O(n^2)
-//
-// @param []int
+/*
+ * SelectionSort - looks for smaller numbers on the right side.
+ *
+ * Runtime: O(n^2)
+ */
 func SelectionSort(array []int) {
 	if len(array) < 2 {
 		return

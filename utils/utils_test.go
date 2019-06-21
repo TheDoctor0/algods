@@ -8,13 +8,10 @@ import (
 )
 
 func TestSwap(t *testing.T) {
-	data := []int{1, 2}
-	swapped := []int{2, 1}
+	data := []int{1, 2, 3, 5, 4, 6, 7, 8, 9}
+	swapped := []int{1, 2, 3, 4, 5, 6, 7, 8, 9}
 
-	utils.Swap(data, 0, 1)
+	utils.Swap(data, 3, 4)
 
 	assert.Equal(t, data, swapped, "Values for given indexes should be swapped.")
-	assert.False(t, utils.Swap(data, 1, 1), "Same indexes cannot be swapped.")
-	assert.False(t, utils.Swap(data, 0, len(data)), "Indexes cannot be greater or equal array length.")
-	assert.False(t, utils.Swap(data, 0, -1), "Indexes cannot be smaller than 0.")
 }
