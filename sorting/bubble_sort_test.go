@@ -12,5 +12,5 @@ func TestBubbleSort(t *testing.T) {
 
 	sorting.BubbleSort(data)
 
-	assert.Equal(t, data, sorted)
+	assert.Equal(t, data, sorted, "Array should be sorted.")
 }

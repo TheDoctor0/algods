@@ -12,5 +12,5 @@ func TestInsertionSort(t *testing.T) {
 
 	sorting.InsertionSort(data)
 
-	assert.Equal(t, data, sorted)
+	assert.Equal(t, data, sorted, "Array should be sorted.")
 }
