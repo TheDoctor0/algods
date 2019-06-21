@@ -8,9 +8,10 @@ import (
 // Runtime: O(n^2)
 //
 // @param []int
-func SelectionSort(array []int) {
+// @return bool
+func SelectionSort(array []int) bool {
 	if len(array) <= 1 {
-		return
+		return false
 	}
 
 	for i := 0; i < len(array); i++ {
@@ -26,4 +27,6 @@ func SelectionSort(array []int) {
 			utils.Swap(array, selection, i)
 		}
 	}
+
+	return true
 }

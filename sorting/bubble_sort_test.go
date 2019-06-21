@@ -14,4 +14,5 @@ func TestBubbleSort(t *testing.T) {
 	sorting.BubbleSort(data)
 
 	assert.Equal(t, data, sorted, "Array should be sorted.")
+	assert.False(t, sorting.BubbleSort([]int{0}), "Array sorting should be skipped for less than 2 elements.")
 }

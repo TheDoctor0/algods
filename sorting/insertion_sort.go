@@ -8,10 +8,10 @@ import (
 // Runtime: O(n^2)
 //
 // @param []int
-//
-func InsertionSort(array []int) {
+// @return bool
+func InsertionSort(array []int) bool {
 	if len(array) <= 1 {
-		return
+		return false
 	}
 
 	for i := 1; i < len(array); i++ {
@@ -21,4 +21,6 @@ func InsertionSort(array []int) {
 			}
 		}
 	}
+
+	return true
 }

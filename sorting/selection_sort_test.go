@@ -14,4 +14,5 @@ func TestSelectionSort(t *testing.T) {
 	sorting.SelectionSort(data)
 
 	assert.Equal(t, data, sorted, "Array should be sorted.")
+	assert.False(t, sorting.SelectionSort([]int{0}), "Array sorting should be skipped for less than 2 elements.")
 }
