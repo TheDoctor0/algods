@@ -1,24 +1,24 @@
 package sorting
 
 import (
-    "github.com/TheDoctor0/algods/utils"
+	"github.com/TheDoctor0/algods/utils"
 )
 
-/*
- * InsertionSort - looks for bigger numbers on the left side.
- *
- * Runtime: O(n^2)
- */
-func InsertionSort(array []int) {
-    if len(array) < 2 {
-        return
-    }
+// InsertionSort implementation
+func InsertionSort(input []int) []int {
+	array, length := utils.CopyAndGetLength(input)
 
-    for i := 1; i < len(array); i++ {
-        for j := 0; j < i; j++ {
-            if array[j] > array[i] {
-                utils.Swap(array, j, i)
-            }
-        }
-    }
+	if length < 2 {
+		return array
+	}
+
+	for i := 1; i < len(array); i++ {
+		for j := 0; j < i; j++ {
+			if array[j] > array[i] {
+				utils.Swap(array, j, i)
+			}
+		}
+	}
+
+	return array
 }

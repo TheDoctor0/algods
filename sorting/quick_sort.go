@@ -1,73 +1,45 @@
 package sorting
 
 import (
-    "math/rand"
-    "time"
-
-    "github.com/TheDoctor0/algods/utils"
+	"github.com/TheDoctor0/algods/utils"
 )
 
-/*
- * QuickSort - quick sort with array shuffle to avoid edgy cases.
- *
- * Runtime: O(n log n)
- */
-func QuickSort(array []int) {
-    if len(array) < 2 {
-        return
-    }
+// QuickSort implementation
+func QuickSort(input []int) []int {
+	array, length := utils.CopyAndGetLength(input)
 
-    Shuffle(array)
+	if length < 2 {
+		return array
+	}
 
-    copy(array, QuickSortPartition(array, 0, len(array)-1))
+	utils.Shuffle(array)
+
+	return quickSort(array, 0, len(array)-1)
 }
 
-/*
- * Shuffle - shuffle elements in array (Fisher–Yates algorithm).
- *
- * Runtime: O(n)
- */
-func Shuffle(array []int) {
-    rand.Seed(time.Now().UnixNano())
+func quickSort(array []int, low int, high int) []int {
+	if low < high {
+		partitionIndex := partition(array, low, high)
 
-    for i := len(array) - 1; i > 0; i-- {
-        j := rand.Intn(i + 1)
+		quickSort(array, low, partitionIndex-1)
+		quickSort(array, partitionIndex+1, high)
+	}
 
-        utils.Swap(array, i, j)
-    }
+	return array
 }
 
-/*
- * QuickSortPartition - uses recursive linear time partitioning.
- */
-func QuickSortPartition(array []int, low int, high int) []int {
-    if low < high {
-        partitionIndex := Partition(array, low, high)
+func partition(array []int, low int, high int) int {
+	pivotIndex := low
 
-        QuickSortPartition(array, low, partitionIndex-1)
-        QuickSortPartition(array, partitionIndex+1, high)
-    }
+	for i := low + 1; i <= high; i++ {
+		if array[i] < array[low] {
+			pivotIndex++
 
-    return array
-}
+			utils.Swap(array, i, pivotIndex)
+		}
+	}
 
-/*
- * Partition - Chooses a pivot and re-arrange the array against it.
- *
- * Runtime: O(n)
- */
-func Partition(array []int, low int, high int) int {
-    pivotIndex := low
+	utils.Swap(array, low, pivotIndex)
 
-    for i := low + 1; i <= high; i++ {
-        if array[i] < array[low] {
-            pivotIndex++
-
-            utils.Swap(array, i, pivotIndex)
-        }
-    }
-
-    utils.Swap(array, low, pivotIndex)
-
-    return pivotIndex
+	return pivotIndex
 }

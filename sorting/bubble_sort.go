@@ -1,32 +1,32 @@
 package sorting
 
 import (
-    "github.com/TheDoctor0/algods/utils"
+	"github.com/TheDoctor0/algods/utils"
 )
 
-/*
- * BubbleSort - bubbles up bigger values to the right side.
- *
- * Runtime: O(n^2)
- */
-func BubbleSort(array []int) {
-    if len(array) < 2 {
-        return
-    }
+// BubbleSort implementation
+func BubbleSort(input []int) []int {
+	array, length := utils.CopyAndGetLength(input)
 
-    for i := len(array); i > 0; i-- {
-        swapped := false
+	if length < 2 {
+		return array
+	}
 
-        for j := 0; j+1 < i; j++ {
-            if array[j] > array[j+1] {
-                utils.Swap(array, j+1, j)
+	for i := len(array); i > 0; i-- {
+		swapped := false
 
-                swapped = true
-            }
-        }
+		for j := 0; j+1 < i; j++ {
+			if array[j] > array[j+1] {
+				utils.Swap(array, j+1, j)
 
-        if !swapped {
-            break
-        }
-    }
+				swapped = true
+			}
+		}
+
+		if !swapped {
+			break
+		}
+	}
+
+	return array
 }
