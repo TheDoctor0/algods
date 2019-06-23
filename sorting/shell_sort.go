@@ -12,19 +12,11 @@ func ShellSort(input []int) []int {
 		return array
 	}
 
-	for i := len(array); i > 0; i-- {
-		swapped := false
-
-		for j := 0; j+1 < i; j++ {
-			if array[j] > array[j+1] {
-				utils.Swap(array, j+1, j)
-
-				swapped = true
+	for k := length / 2; k > 0; k /= 2 {
+		for i := k; i < length; i++ {
+			for j := i; j >= k && array[j-k] > array[j]; j -= k {
+				utils.Swap(array, j-k, j)
 			}
-		}
-
-		if !swapped {
-			break
 		}
 	}
 
