@@ -16,7 +16,7 @@ func CountingSort(input []int) []int {
 	counts := make([]int, k)
 
 	for i := 0; i < length; i++ {
-		counts[array[i]] += 1
+		counts[array[i]]++
 	}
 
 	index := 0
