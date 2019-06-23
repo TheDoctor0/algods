@@ -20,7 +20,7 @@ func TestSwap(t *testing.T) {
 func TestCopyAndLength(t *testing.T) {
 	input := []int{1, 2, 3, 5, 4, 6, 7, 8, 9}
 
-	cloned, length = utils.CopyAndGetLength()
+	cloned, length := utils.CopyAndGetLength(input)
 
 	assert.True(t, reflect.DeepEqual(input, cloned), "Cloned array should be identical.")
 	assert.Equal(t, len(input), length, "Cloned array should have same length.")

@@ -5,7 +5,7 @@ import (
 	"time"
 )
 
-/* CopyAndGetLength - returns copy of array and its size. */
+/*CopyAndGetLength - returns copy of array and its size.*/
 func CopyAndGetLength(input []int) ([]int, int) {
 	length := len(input)
 	array := make([]int, length)
@@ -14,12 +14,12 @@ func CopyAndGetLength(input []int) ([]int, int) {
 	return array, length
 }
 
-/* Swap - swaps values for specified indexes in given array. */
+/*Swap - swaps values for specified indexes in given array.*/
 func Swap(array []int, from int, to int) {
 	array[from], array[to] = array[to], array[from]
 }
 
-/* Shuffle - shuffle elements in array using Fisher–Yates algorithm. */
+/*Shuffle - shuffle elements in array using Fisher–Yates algorithm.*/
 func Shuffle(array []int) {
 	rand.Seed(time.Now().UnixNano())
 
