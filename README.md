@@ -14,7 +14,8 @@ Implementation of various algorithms and data structures in Golang.
 - [Heap sort](https://github.com/TheDoctor0/algods/sorting/heap_sort.md)
 - [Shaker sort](https://github.com/TheDoctor0/algods/sorting/shaker_sort.md)
 - [Comb sort](https://github.com/TheDoctor0/algods/sorting/comb_sort.md)
-- [Heap sort](https://github.com/TheDoctor0/algods/sorting/heap_sort.md)
+- [Gnome sort](https://github.com/TheDoctor0/algods/sorting/gnome_sort.md)
+- [Counting sort](https://github.com/TheDoctor0/algods/sorting/counting_sort.md)
 
 ## Data Structures
 
