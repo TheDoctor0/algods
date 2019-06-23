@@ -1,6 +1,6 @@
-# Quicksort
+# Quick Sort
 
-Quicksort is a fast sorting algorithm that takes a **divide-and-conquer approach** for sorting lists. It picks one element as a pivot element and partitions the array around it such that: left side of pivot contains all the elements that are less than the pivot element and right side contains all elements greater than the pivot. 
+Quick sort is a fast sorting algorithm that takes a **divide-and-conquer approach** for sorting lists. It picks one element as a pivot element and partitions the array around it such that: left side of pivot contains all the elements that are less than the pivot element and right side contains all elements greater than the pivot. 
 
 ## Explanation
 Following example explains how the pivot value is found in an array.

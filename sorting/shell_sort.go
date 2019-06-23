@@ -4,15 +4,15 @@ import (
 	"github.com/TheDoctor0/algods/utils"
 )
 
-/*BubbleSort implementation*/
-func BubbleSort(input []int) []int {
+/*ShellSort implementation*/
+func ShellSort(input []int) []int {
 	array, length := utils.CopyAndGetLength(input)
 
 	if length < 2 {
 		return array
 	}
 
-	for i := length; i > 0; i-- {
+	for i := len(array); i > 0; i-- {
 		swapped := false
 
 		for j := 0; j+1 < i; j++ {

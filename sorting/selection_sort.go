@@ -12,10 +12,10 @@ func SelectionSort(input []int) []int {
 		return array
 	}
 
-	for i := 0; i < len(array); i++ {
+	for i := 0; i < length; i++ {
 		selection := i
 
-		for j := i + 1; j < len(array); j++ {
+		for j := i + 1; j < length; j++ {
 			if array[selection] > array[j] {
 				selection = j
 			}

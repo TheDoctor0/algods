@@ -5,11 +5,16 @@ Implementation of various algorithms and data structures in Golang.
 ## Algorithms
 
 ### Sorting
-  - Bubble sort
-  - Insertion sort
-  - Selection sort
-  - Merge sort
-  - Quicksort
+- [Bubble sort](https://github.com/TheDoctor0/algods/sorting/bubble_sort.md)
+- [Insertion sort](https://github.com/TheDoctor0/algods/sorting/insertion_sort.md)
+- [Selection sort](https://github.com/TheDoctor0/algods/sorting/selection_sort.md)
+- [Merge sort](https://github.com/TheDoctor0/algods/sorting/merge_sort.md)
+- [Quick sort](https://github.com/TheDoctor0/algods/sorting/quick_sort.md)
+- [Shell sort](https://github.com/TheDoctor0/algods/sorting/shell_sort.md)
+- [Heap sort](https://github.com/TheDoctor0/algods/sorting/heap_sort.md)
+- [Shaker sort](https://github.com/TheDoctor0/algods/sorting/shaker_sort.md)
+- [Comb sort](https://github.com/TheDoctor0/algods/sorting/comb_sort.md)
+- [Heap sort](https://github.com/TheDoctor0/algods/sorting/heap_sort.md)
 
 ## Data Structures
 

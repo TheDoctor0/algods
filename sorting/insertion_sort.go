@@ -12,7 +12,7 @@ func InsertionSort(input []int) []int {
 		return array
 	}
 
-	for i := 1; i < len(array); i++ {
+	for i := 1; i < length; i++ {
 		for j := 0; j < i; j++ {
 			if array[j] > array[i] {
 				utils.Swap(array, j, i)
