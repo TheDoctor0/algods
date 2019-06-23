@@ -4,7 +4,7 @@ import (
 	"github.com/TheDoctor0/algods/utils"
 )
 
-// SelectionSort implementation
+/* SelectionSort implementation */
 func SelectionSort(input []int) []int {
 	array, length := utils.CopyAndGetLength(input)
 

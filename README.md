@@ -9,8 +9,11 @@ Implementation of various algorithms and data structures in Golang.
   - Insertion sort
   - Selection sort
   - Merge sort
-  - Quick sort
+  - Quicksort
 
 ## Data Structures
 
 TODO
+
+## Credits
+[OpenGenus Foundation](https://github.com/OpenGenus/cosmos) for their amazing algorithms and data structure descriptions that are integral part of this project.

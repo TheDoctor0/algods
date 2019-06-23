@@ -4,7 +4,7 @@ import (
 	"github.com/TheDoctor0/algods/utils"
 )
 
-// BubbleSort implementation
+/* BubbleSort implementation */
 func BubbleSort(input []int) []int {
 	array, length := utils.CopyAndGetLength(input)
 

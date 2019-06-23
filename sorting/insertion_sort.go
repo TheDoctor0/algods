@@ -4,7 +4,7 @@ import (
 	"github.com/TheDoctor0/algods/utils"
 )
 
-// InsertionSort implementation
+/* InsertionSort implementation */
 func InsertionSort(input []int) []int {
 	array, length := utils.CopyAndGetLength(input)
 

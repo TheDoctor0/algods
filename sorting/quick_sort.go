@@ -4,7 +4,7 @@ import (
 	"github.com/TheDoctor0/algods/utils"
 )
 
-// QuickSort implementation
+/* QuickSort implementation */
 func QuickSort(input []int) []int {
 	array, length := utils.CopyAndGetLength(input)
 

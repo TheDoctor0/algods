@@ -4,7 +4,7 @@ import (
 	"github.com/TheDoctor0/algods/utils"
 )
 
-// MergeSort implementation
+/* MergeSort implementation */
 func MergeSort(input []int) []int {
 	array, length := utils.CopyAndGetLength(input)
 
