@@ -29,4 +29,6 @@ func TestListStack(t *testing.T) {
 
 	assert.Equal(t, 1, stack.Pop(), "Value popped from stack should be equal 1.")
 	assert.Equal(t, 0, stack.Len(), "Stack should be empty.")
+
+	assert.Equal(t, nil, stack.Pop(), "Value popped from empty stack should be equal nil.")
 }
