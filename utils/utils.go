@@ -9,6 +9,7 @@ import (
 func CopyAndGetLength(input []int) ([]int, int) {
 	length := len(input)
 	array := make([]int, length)
+
 	copy(array, input)
 
 	return array, length
