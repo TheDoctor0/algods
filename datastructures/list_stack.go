@@ -17,7 +17,7 @@ func NewListStack() *ListStack {
 	return &ListStack{}
 }
 
-/*Length of ListStack*/
+/*Len of ListStack*/
 func (stack *ListStack) Len() int {
 	return stack.size
 }

@@ -12,7 +12,7 @@ func NewArrayStack(size int) *ArrayStack {
 	return &ArrayStack{size: size, values: make([]interface{}, size)}
 }
 
-/*Length of ArrayStack*/
+/*Len of ArrayStack (current)*/
 func (stack *ArrayStack) Len() int {
 	return stack.current
 }
