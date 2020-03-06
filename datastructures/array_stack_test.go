@@ -7,8 +7,8 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-func TestListStack(t *testing.T) {
-	stack := datastructures.NewListStack()
+func TestArrayStack(t *testing.T) {
+	stack := datastructures.NewArrayStack(3)
 
 	assert.Equal(t, 0, stack.Len(), "New stack should be empty.")
 

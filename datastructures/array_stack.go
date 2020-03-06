@@ -1,31 +1,37 @@
 package datastructures
 
-/*ListStack type*/
+/*ArrayStack type*/
 type ArrayStack struct {
-	values []interface{}
-	size   int
+	values  []interface{}
+	current int
+	size    int
 }
 
-/*Length of ListStack*/
+/*NewArrayStack creates stack with specified size*/
+func NewArrayStack(size int) *ArrayStack {
+	return &ArrayStack{size: size, values: make([]interface{}, size)}
+}
+
+/*Length of ArrayStack*/
 func (stack *ArrayStack) Len() int {
-	return stack.size
+	return stack.current
 }
 
-/*Push new element to ListStack*/
+/*Push new element to ArrayStack*/
 func (stack *ArrayStack) Push(value interface{}) {
-	stack.values[stack.size] = value
-	stack.size++
+	stack.values[stack.current] = value
+	stack.current++
 }
 
-/*Pop last element from ListStack*/
+/*Pop last element from ArrayStack*/
 func (stack *ArrayStack) Pop() (value interface{}) {
 	if stack.Len() == 0 {
 		return nil
 	}
 
-	stack.size--
-	value = stack.values[stack.size]
-	stack.values[stack.size] = nil
+	stack.current--
+	value = stack.values[stack.current]
+	stack.values[stack.current] = nil
 
 	return value
 }

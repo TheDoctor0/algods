@@ -12,6 +12,11 @@ type ListStack struct {
 	size int
 }
 
+/*NewListStack creates stack with specified size*/
+func NewListStack() *ListStack {
+	return &ListStack{}
+}
+
 /*Length of ListStack*/
 func (stack *ListStack) Len() int {
 	return stack.size
