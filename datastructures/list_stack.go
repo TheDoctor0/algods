@@ -1,19 +1,23 @@
 package datastructures
 
+/*StackItem type*/
 type StackItem struct {
 	value interface{}
 	next  *StackItem
 }
 
+/*ListStack type*/
 type ListStack struct {
 	top  *StackItem
 	size int
 }
 
+/*Get length of ListStack*/
 func (stack *ListStack) Len() int {
 	return stack.size
 }
 
+/*Push new element to ListStack*/
 func (stack *ListStack) Push(value interface{}) {
 	stack.top = &StackItem{
 		value: value,
@@ -23,6 +27,7 @@ func (stack *ListStack) Push(value interface{}) {
 	stack.size++
 }
 
+/*Pop last element from ListStack*/
 func (stack *ListStack) Pop() (value interface{}) {
 	if stack.Len() == 0 {
 		return nil
