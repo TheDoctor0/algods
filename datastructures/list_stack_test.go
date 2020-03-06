@@ -3,12 +3,11 @@ package datastructures_test
 import (
 	"testing"
 
-	"github.com/TheDoctor0/algods/datastructures"
 	"github.com/stretchr/testify/assert"
 )
 
 func TestStack(t *testing.T) {
-	stack := new(datastructures.ListStack)
+	stack := NewListStack()
 
 	assert.Equal(t, stack.Len(), 0, "New stack should be empty.")
 
