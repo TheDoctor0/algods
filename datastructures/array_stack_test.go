@@ -21,6 +21,8 @@ func TestArrayStack(t *testing.T) {
 	stack.Push(3)
 	assert.Equal(t, 3, stack.Len(), "Stack length should be equal 3.")
 
+	assert.Panics(t, func() { stack.Push(4) }, "Stack should not allow to exceed its defined size.")
+
 	assert.Equal(t, 3, stack.Pop(), "Value popped from stack should be equal 3.")
 	assert.Equal(t, 2, stack.Len(), "Stack length should be equal 2.")
 

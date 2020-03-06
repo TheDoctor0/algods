@@ -19,6 +19,10 @@ func (stack *ArrayStack) Len() int {
 
 /*Push new element to ArrayStack*/
 func (stack *ArrayStack) Push(value interface{}) {
+	if stack.Len() == stack.size {
+		panic("stack size exceeded")
+	}
+
 	stack.values[stack.current] = value
 	stack.current++
 }
