@@ -12,7 +12,7 @@ type ListStack struct {
 	size int
 }
 
-/*Get length of ListStack*/
+/*Length of ListStack*/
 func (stack *ListStack) Len() int {
 	return stack.size
 }
