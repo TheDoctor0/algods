@@ -32,3 +32,15 @@ func TestListStack(t *testing.T) {
 
 	assert.Equal(t, nil, stack.Pop(), "Value popped from empty stack should be equal nil.")
 }
+
+func BenchmarkListStack(b *testing.B) {
+	stack := datastructures.NewListStack()
+
+	for i := 0; i < b.N; i++ {
+		stack.Push(i)
+	}
+
+	for i := 0; i < b.N; i++ {
+		stack.Pop()
+	}
+}

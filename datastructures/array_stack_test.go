@@ -34,3 +34,15 @@ func TestArrayStack(t *testing.T) {
 
 	assert.Equal(t, nil, stack.Pop(), "Value popped from empty stack should be equal nil.")
 }
+
+func BenchmarkArrayStack(b *testing.B) {
+	stack := datastructures.NewArrayStack(b.N)
+
+	for i := 0; i < b.N; i++ {
+		stack.Push(i)
+	}
+
+	for i := 0; i < b.N; i++ {
+		stack.Pop()
+	}
+}
