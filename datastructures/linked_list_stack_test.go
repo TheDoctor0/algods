@@ -1,0 +1,46 @@
+package datastructures_test
+
+import (
+	"github.com/stretchr/testify/assert"
+	"testing"
+
+	"github.com/TheDoctor0/algods/datastructures"
+)
+
+func TestLinkedListStack(t *testing.T) {
+	stack := datastructures.NewLinkedListStack()
+
+	assert.Equal(t, 0, stack.Len(), "New stack should be empty.")
+
+	stack.Push(1)
+	assert.Equal(t, 1, stack.Len(), "Stack length should be equal 1.")
+
+	stack.Push("test")
+	assert.Equal(t, 2, stack.Len(), "Stack length should be equal 2.")
+
+	stack.Push(3)
+	assert.Equal(t, 3, stack.Len(), "Stack length should be equal 3.")
+
+	assert.Equal(t, 3, stack.Pop(), "Value popped from stack should be equal 3.")
+	assert.Equal(t, 2, stack.Len(), "Stack length should be equal 2.")
+
+	assert.Equal(t, "test", stack.Pop(), "Value popped from stack should be equal 'test'.")
+	assert.Equal(t, 1, stack.Len(), "Stack length should be equal 1.")
+
+	assert.Equal(t, 1, stack.Pop(), "Value popped from stack should be equal 1.")
+	assert.Equal(t, 0, stack.Len(), "Stack should be empty.")
+
+	assert.Equal(t, nil, stack.Pop(), "Value popped from empty stack should be equal nil.")
+}
+
+func BenchmarkLinkedListStack(b *testing.B) {
+	stack := datastructures.NewLinkedListStack()
+
+	for i := 0; i < b.N; i++ {
+		stack.Push(i)
+	}
+
+	for i := 0; i < b.N; i++ {
+		stack.Pop()
+	}
+}

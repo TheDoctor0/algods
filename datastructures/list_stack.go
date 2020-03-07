@@ -1,34 +1,24 @@
 package datastructures
 
-/*StackItem type*/
-type StackItem struct {
-	value interface{}
-	next  *StackItem
-}
-
 /*ListStack type*/
 type ListStack struct {
-	top  *StackItem
-	size int
+	values []interface{}
+	size   int
 }
 
-/*NewListStack creates stack with specified size*/
+/*NewListStack creates list stack*/
 func NewListStack() *ListStack {
 	return &ListStack{}
 }
 
-/*Len of ListStack*/
+/*Len of ListStack (current)*/
 func (stack *ListStack) Len() int {
 	return stack.size
 }
 
 /*Push new element to ListStack*/
 func (stack *ListStack) Push(value interface{}) {
-	stack.top = &StackItem{
-		value: value,
-		next:  stack.top,
-	}
-
+	stack.values = append(stack.values, value)
 	stack.size++
 }
 
@@ -38,9 +28,9 @@ func (stack *ListStack) Pop() (value interface{}) {
 		return nil
 	}
 
-	value = stack.top.value
-	stack.top = stack.top.next
 	stack.size--
+	value = stack.values[stack.size]
+	stack.values[stack.size] = nil
 
 	return value
 }
