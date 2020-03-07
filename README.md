@@ -19,8 +19,9 @@ Implementation of various algorithms and data structures in Golang.
 
 ## Data Structures
 
-- ListStack
 - ArrayStack
+- ListStack
+- LinkedListStack
 
 ## Credits
 [OpenGenus Foundation](https://github.com/OpenGenus/cosmos) for their amazing algorithms and data structure descriptions that are integral part of this project.
