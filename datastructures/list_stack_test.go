@@ -1,10 +1,10 @@
 package datastructures_test
 
 import (
+	"github.com/stretchr/testify/assert"
 	"testing"
 
 	"github.com/TheDoctor0/algods/datastructures"
-	"github.com/stretchr/testify/assert"
 )
 
 func TestListStack(t *testing.T) {

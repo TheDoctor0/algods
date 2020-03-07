@@ -1,10 +1,9 @@
 package sorting_test
 
 import (
-	"testing"
-
 	"github.com/TheDoctor0/algods/sorting"
 	"github.com/stretchr/testify/assert"
+	"testing"
 )
 
 func TestShakerSortForSingleValue(t *testing.T) {
