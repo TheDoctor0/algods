@@ -5,17 +5,17 @@ Implementation of various algorithms and data structures in Golang.
 ## Algorithms
 
 ### Sorting
-- [Bubble sort](https://github.com/TheDoctor0/algods/sorting/bubble_sort.md)
-- [Insertion sort](https://github.com/TheDoctor0/algods/sorting/insertion_sort.md)
-- [Selection sort](https://github.com/TheDoctor0/algods/sorting/selection_sort.md)
-- [Merge sort](https://github.com/TheDoctor0/algods/sorting/merge_sort.md)
-- [Quick sort](https://github.com/TheDoctor0/algods/sorting/quick_sort.md)
-- [Shell sort](https://github.com/TheDoctor0/algods/sorting/shell_sort.md)
-- [Heap sort](https://github.com/TheDoctor0/algods/sorting/heap_sort.md)
-- [Shaker sort](https://github.com/TheDoctor0/algods/sorting/shaker_sort.md)
-- [Comb sort](https://github.com/TheDoctor0/algods/sorting/comb_sort.md)
-- [Gnome sort](https://github.com/TheDoctor0/algods/sorting/gnome_sort.md)
-- [Counting sort](https://github.com/TheDoctor0/algods/sorting/counting_sort.md)
+- [Bubble sort](https://github.com/TheDoctor0/algods/blob/master/sorting/bubble_sort.md)
+- [Insertion sort](https://github.com/TheDoctor0/algods/blob/master/sorting/insertion_sort.md)
+- [Selection sort](https://github.com/TheDoctor0/algods/blob/master/sorting/selection_sort.md)
+- [Merge sort](https://github.com/TheDoctor0/algods/blob/master/sorting/merge_sort.md)
+- [Quick sort](https://github.com/TheDoctor0/algods/blob/master/sorting/quick_sort.md)
+- [Shell sort](https://github.com/TheDoctor0/algods/blob/master/sorting/shell_sort.md)
+- [Heap sort](https://github.com/TheDoctor0/algods/blob/master/sorting/heap_sort.md)
+- [Shaker sort](https://github.com/TheDoctor0/algods/blob/master/sorting/shaker_sort.md)
+- [Comb sort](https://github.com/TheDoctor0/algods/blob/master/sorting/comb_sort.md)
+- [Gnome sort](https://github.com/TheDoctor0/algods/blob/master/sorting/gnome_sort.md)
+- [Counting sort](https://github.com/TheDoctor0/algods/blob/master/sorting/counting_sort.md)
 
 ## Data Structures
 
